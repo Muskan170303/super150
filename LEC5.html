@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box p{
+            color: red;
+        }
+        article{
+            color:blue;
+        }
+        article > p {
+            color:aqua;
+        }
+        h2{
+            color: chocolate;
+        }
+        ul >li{
+            border-top: 5px solid magenta;
+        }
+        ol >li{
+            border-top: 5px solid aquamarine;
+        }
+        h4+p{
+            font-weight:bold ;
+            background-color: brown;
+            color:aqua
+            padding : .5em;
+        }
+        h3~p{
+            font-weight:bold ;
+            background-color: brown;
+            color:aqua
+            padding : .5em;
+        }
+        .box:hover{
+            block-size: 250px;
+            border-radius: 250px;
+        }
+        div{
+            background-color: burlywood;
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            gap: 20px;
+        }
+        .container .box+.box{
+            background-color: antiquewhite;
+        }
+        h2:hover{
+            background-color: yellow;
+        }
+
+        section:nth-of-type(2){
+            width: 150px;
+            height: 150px;
+            border: 20px solid blueviolet;
+        }
+        li:nth-of-type(even){  
+            color:chartreuse;
+        }
+        li:first-child{
+            color:lime;
+        }
+        li:last-child{
+            color:blanchedalmond;
+        }
+        h1::before{
+            content: '(a before text)';
+        }
+        a:hover{
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>LECTURE 5 COMBINATORS</h1>
+    <h2>Descendant combinator</h2>
+    <div class="box"><p>Text in .box</p></div>
+    <p>Text not in .box</p>
+    <h2>Child combinator</h2>
+    <article>
+        <p>p tag in article tag, where p is child of article.</p>
+        <span>It is an span tag in article tag</span>
+    </article>
+    <p>p tag without article tag.</p>
+    <article>article tag without p tag.</article>
+    <br>
+    <br>
+    <span><h5>This a list:</h5></span>
+    <ul>
+        <li>item1</li>
+        <li>item2
+            <ol>
+                <li>item a</li>
+                <li>item b</li>
+            </ol>
+        </li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+    <article>
+        <h4> Adjacent sibling combinator (+)</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nemo soluta ipsum accusantium enim. Repudiandae id architecto nulla quo incidunt.</p>
+        <h5> sub heading</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorem voluptatibus, molestias delectus beatae harum vero quos explicabo nihil voluptates!</p>
+    </article>
+    <article>
+        <h3> General sibling combinator (~)</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nemo soluta ipsum accusantium enim. Repudiandae id architecto nulla quo incidunt.</p>
+        <h5> sub heading</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorem voluptatibus, molestias delectus beatae harum vero quos explicabo nihil voluptates!</p>
+    </article>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <span>this is not a box ;-)</span>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptatum asperiores, modi iste magni cupiditate aliquid voluptas! Alias, ullam minima?</p>
+        <ul>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+            <li>this is a item</li>
+        </ul>
+        <span>this is a span in section</span>
+        </section>
+        
+        <a href="https://www.google.co.in">Google</a>
+    <a href="https://www.youtube.com"> Youtube</a>
+    <a href="https://www.facebook.com"> Facebook</a>
+    <a href="https://in.linkedin.com"> linkedin</a>
+    <br>
+    <br>
+    <br>
+    </div> 
+    
+     
+    </body>
+</html>
