@@ -1,0 +1,147 @@
+<!--
+    color theory
+    24 bit 
+    red green blue
+    0->255 each decimal range
+    0->ff each hexa decimal range
+    (2 bit for red + 2 bit for green + 2 bit for blue ) to give color eg. ff2131
+    white -> fff
+    black -> 000
+    provide hexadecimal value with a # at start
+
+
+    hue, saturation and ligthness
+    hue -> 0 to 360
+    saturation% -> 0%(grey) to 100%(full saturated)
+    lightness% ->  0% to 100%
+
+    css box model
+    1. dimension
+    2. border
+    3. margin(box to bow) -> only one value -> all four sides
+                          -> two values -> first for top and bottom second for left and right
+                          -> four values -> order is top right bottom left 
+    4. padding(content distance from box)
+
+
+    css units
+    absolute -> px rem em 
+
+    css position
+    -> natural flow(static class never goes out of its natural flow)
+    -> layout(relative class can be applied with changes through offset)
+
+    absolute position -> takes body as its parent unless its parent and position is applied
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            max-height: 50%;
+            max-width: 75%;
+            border: 2px black solid;
+            margin: 25px auto;
+            padding: 30px;
+        }
+        ul{
+            font-size:2em; 
+        }
+        ul>ul{
+            font-size : 2em;
+        }
+        div:nth-of-type(1){
+            background-color: #21eeff;
+        }
+        div:nth-of-type(2){
+            background-color: #02ff;
+        }
+        div:nth-of-type(3){
+            background-color: rgba(100,255,00, 1);
+        }
+        div:nth-of-type(4){
+            background-color: hsl(350, 50%, 70%);
+        }
+        div>div{
+            background-color: azure;
+            max-height: 50%;
+            max-width: 50%;
+            margin:auto;
+            border: 2px blue dashed;
+        }
+        span:nth-of-type(1){
+            background-color: deeppink;
+            width: 250px;
+            height:250px;
+            display: inline-block;
+            border: 2px black solid;
+        }
+        span:nth-of-type(2){
+            background-color: blue;
+            width: 250px;
+            height: 250px;
+            
+            display:inline-block;
+            border: 2px black solid;
+        }
+        .static #middle{
+            position:static;
+            top: 80px;
+            left: 50px;
+        }
+        .relative #back{
+            position:relative;
+            top: 60px;
+            left: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>1ST DIV </div>
+    <div>2ND DIV</div>
+    <div>3RD DIV</div>
+     <div>4TH DIV</div> 
+    <div>
+        <div>
+                Lorem sci eligendi hghfhgfjhjhkhkf jyggujhihji guj fhfghfgnhjhn hiouhiouhy  tempore. At, inventore tenetur.
+        </div>
+    </div>
+    <ul>
+        <li> green</li>
+        <li> red</li>
+        <li> blue</li>
+        <li> yellow</li>
+        <ul>
+            <li> black</li>
+            <li> grey</li>
+            <ul>
+                <li>purple</li>
+                <li>brown</li>
+            </ul>
+            <li> white</li>
+        </ul>
+    </ul>
+    <span>1ST SPAN</span>
+    <span>2ND SPAN</span>
+    <br>
+    <br>
+    <h1> CSS POSITIONS </h1>
+    <section class="static">
+        <div style="background-color: aqua;"></div>
+        <div id="middle" style="background-color: orange;"></div>
+        <div style="background-color: blue;"></div>
+    </section><br>
+    <br>
+    <section class="relative">
+        <div style="background-color: aqua;"></div>
+        <div id="back" style="background-color: orange;"></div>
+        <div style="background-color: blue;"></div>
+    </section>
+</body>
+</html>
