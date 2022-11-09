@@ -1,0 +1,49 @@
+section{
+    height: 250px;
+    width: 400px;
+    background-color: brown;
+    animation-name: Slider;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+div{
+    background-color: red;
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    animation-name: bounce;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes Slider{
+    20%{
+        width:200px
+    }
+    40%{
+        height:300px;
+    }
+    40%{
+        width:300px;
+    }
+}
+@keyframes bounce{
+    25%{
+        margin-top: 100%;   
+    }
+    25%{
+        /* object-position:initial; */
+        margin-left: 100%;
+    }
+    25%{
+        margin-bottom:100%;
+    }
+    25%{
+        margin-right:100%;
+    }
+}
